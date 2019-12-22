@@ -30,7 +30,7 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.html">
-                                        <span><img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="160"></span>
+                                        <span><img src="{{asset('assets/images/doraemon.png')}}" alt="" height="160"></span>
                                     </a>
                                    <h3 class="text-primary">
                                        @if(session('thongbao'))

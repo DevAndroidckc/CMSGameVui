@@ -138,6 +138,7 @@ class QuanTriVienController extends Controller
             return "Đăng nhập thất bại";
         }
     }
+   
     public function getLogout()
     {
         Auth::guard('quantrivien')->logout();

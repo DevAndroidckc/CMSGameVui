@@ -15,7 +15,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 
-                                <a href="{{route('dang-nhap')}}" class="dropdown-item notify-item">
+                                <a href="{{route('dang-xuat')}}" class="dropdown-item notify-item">
                                     <i class="fe-log-out"></i>
                                     <span>Logout</span>
                                 </a>
