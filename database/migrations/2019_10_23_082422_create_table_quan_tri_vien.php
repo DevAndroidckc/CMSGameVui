@@ -17,7 +17,6 @@ class CreateTableQuanTriVien extends Migration
             $table->increments('id');
             $table->string('ten_dang_nhap',50)->unique();
             $table->text('mat_khau');
-            //$table->string('email',50)->unique();
             $table->string('ho_ten');
             $table->timestamps();
             $table->softDeletes();

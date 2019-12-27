@@ -4,20 +4,27 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\LuotChoi;
+use App\NguoiChoi;
 class LichSuController extends Controller
 {
 	public function layDanhSach(Request $request)
 	{
-    	$page=$request->query('page',1);
-    	$limit=$request->query('limit',25);
-    	$listLuotChoi=LuotChoi::orderBy('created_at','desc')->skip(($page-1)*$limit)->take($limit)->get();
-
-    	return response()->json([
-    		'total'=>LuotChoi::count();
-    		'data'=>$listLuotChoi;
-    		]);
+    	$luotChoi  = LuotChoi::all();
+        if ($luotChoi != null) {
+            $result = [
+                'success' => true,
+                'message' => "Lấy danh sách lượt chơi thành công",
+                'data'    => $luotChoi,
+            ];
+            return response()->json($result);
+        }
+        return response()->json([
+            'success'     => false,
+            'message'     => "Lấy danh sách lượt chơi thất bại"
+        ]);
     }
+    //Theo id
      public function layLuotChoi(Request $request, $id)
     {
          $luot_choi=LuotChoi::find($id);

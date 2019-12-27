@@ -18,6 +18,8 @@ route::get('dang-nhap','QuanTriVienController@dangNhap')->name('dang-nhap');
 route::get('dang-xuat','QuanTriVienController@dangXuat')->name('dang-xuat');
 route::post('dang-nhap','QuanTriVienController@xuLiDangNhap')->name('xu-li-dang-nhap');
 
+
+Route::get('mail/send','SendMailController@send');
 Route::middleware('auth')->group(function(){
 
 		Route::prefix('trang-chu')->group(function(){

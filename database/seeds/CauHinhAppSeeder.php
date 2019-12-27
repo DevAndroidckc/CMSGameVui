@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\CauHinhApp;
 class CauHinhAppSeeder extends Seeder
 {
     /**
