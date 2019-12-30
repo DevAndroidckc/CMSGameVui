@@ -9,9 +9,8 @@ class DangNhapController extends Controller
 {
     public function dangNhap(Request $request)
     {
-    	$ten_dang_nhap=$request->ten_dang_nhap;
-    	$mat_khau=$request->mat_khau;
-    	if($ten_dang_nhap =='thanh' && $mat_khau == '123')
+    	$NguoiChoi=NguoiChoi::where('ten_dang_nhap',$request->ten_dang_nhap)->where('mat_khau',$request->mat_khau)->first();
+    	if($NguoiChoi!=null)
     	{
     		return response()->json([
     			'success'=>true,

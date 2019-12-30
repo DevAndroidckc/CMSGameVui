@@ -23,6 +23,6 @@ Route::get('credit','API\CreditController@layDanhSach');
 Route::post('dang-nhap', 'API\DangNhapController@dangNhap');
 Route::get('lich-su', 'API\LichSuController@layDanhSach');
 Route::get('bang-xep-hang', 'API\BangXepHangController@layDanhSach');
-
+Route::post('dang-ki', 'API\NguoiChoiController@dangKi');
 
 
